@@ -103,5 +103,5 @@ entry = str(input())
 try:
     formula = calculator(entry)
     formula.calculation()
-except DivisionByZero:
+except ZeroDivisionError:
     print('Ошибка, деление на ноль')
