@@ -98,7 +98,10 @@ class calculator():
                 print(stack_1[0])
 
 
-print('Введите пример')                
+print('Введите пример') 
 entry = str(input())
-formula = calculator(entry)
-formula.calculation()
+try:
+    formula = calculator(entry)
+    formula.calculation()
+except DivisionByZero:
+    print('Ошибка, деление на ноль')
